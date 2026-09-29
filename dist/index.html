@@ -1157,6 +1157,32 @@
         font-weight: 700;
       }
 
+      .footer-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 12px;
+        padding-right: 72px;
+      }
+
+      .footer-credit {
+        color: var(--wine);
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+      }
+
+      .footer-credit:hover {
+        color: var(--green-dark);
+      }
+
+      .footer-credit:focus-visible {
+        outline: 3px solid #184e9d;
+        outline-offset: 4px;
+        border-radius: 3px;
+      }
+
       .whatsapp-float {
         position: fixed;
         z-index: 90;
@@ -1352,6 +1378,12 @@
           align-items: flex-start;
           flex-direction: column;
           padding-top: 70px;
+        }
+
+        .footer-meta {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 8px;
         }
 
         .whatsapp-float {
@@ -1628,7 +1660,10 @@
               <a href="#metodo">Método</a>
               <a href="#faq">Dúvidas</a>
             </div>
-            <span>© <span id="year"></span> Malu Pimentel</span>
+            <span class="footer-meta">
+              <span>© <span id="year"></span> Malu Pimentel</span>
+              <a class="footer-credit" href="https://neurallabs.com.br/" target="_blank" rel="noreferrer">Criado por NeuralLabs</a>
+            </span>
           </footer>
         </div>
       </section>
