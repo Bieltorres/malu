@@ -394,7 +394,7 @@
 
       .poster-wrap {
         position: relative;
-        width: min(100%, 410px);
+        width: min(100%, 430px);
         margin-inline: auto;
       }
 
@@ -409,9 +409,16 @@
         transform: rotate(-3deg);
       }
 
-      .poster {
+      .vip-card {
+        position: relative;
         overflow: hidden;
-        background: var(--paper);
+        min-height: 580px;
+        padding: 34px 28px 30px;
+        background-color: var(--olive);
+        background-image:
+          linear-gradient(90deg, transparent 50%, rgba(103, 132, 108, 0.65) 50%),
+          linear-gradient(rgba(103, 132, 108, 0.65) 50%, transparent 50%);
+        background-size: 150px 150px;
         border: 5px solid var(--cream);
         border-radius: 30px;
         box-shadow: var(--shadow);
@@ -419,16 +426,85 @@
         transition: transform 280ms ease;
       }
 
-      .poster:hover {
+      .vip-card:hover {
         transform: rotate(0deg) translateY(-5px);
       }
 
-      .poster img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 9 / 13;
-        object-fit: cover;
-        object-position: top center;
+      .vip-title {
+        margin: 0 0 24px;
+        color: var(--wine);
+        font-family: var(--display);
+        font-size: clamp(4rem, 6vw, 5.4rem);
+        font-weight: 700;
+        letter-spacing: -0.055em;
+        line-height: 0.82;
+        text-align: center;
+        text-shadow:
+          -3px -3px 0 var(--cream),
+          3px -3px 0 var(--cream),
+          -3px 3px 0 var(--cream),
+          3px 3px 0 var(--cream);
+        text-transform: uppercase;
+      }
+
+      .vip-title span {
+        display: block;
+        white-space: nowrap;
+      }
+
+      .vip-benefits {
+        position: relative;
+        padding: 22px 22px 19px;
+        color: var(--ink);
+        background: var(--white);
+        border: 2px solid var(--wine);
+        border-radius: 18px;
+        box-shadow: 0 13px 28px rgba(38, 61, 50, 0.16);
+      }
+
+      .vip-benefits h2 {
+        max-width: 320px;
+        margin: 0 auto 15px;
+        color: var(--wine);
+        font-size: 1.24rem;
+        line-height: 1.03;
+        text-align: center;
+      }
+
+      .vip-benefits ul {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .vip-benefits li {
+        position: relative;
+        padding-left: 19px;
+        font-size: 0.86rem;
+        line-height: 1.16;
+      }
+
+      .vip-benefits li::before {
+        position: absolute;
+        top: 0.38em;
+        left: 0;
+        width: 9px;
+        height: 9px;
+        content: "";
+        background: var(--wine);
+        border-radius: 50%;
+      }
+
+      .vip-flag {
+        position: absolute;
+        top: 138px;
+        right: 15px;
+        z-index: 2;
+        font-size: 2.5rem;
+        filter: drop-shadow(2px 3px 0 var(--cream));
+        transform: rotate(10deg);
       }
 
       .poster-label {
@@ -790,30 +866,100 @@
 
       .teacher-poster {
         position: relative;
-        padding: 18px;
-        background: var(--cream);
+        overflow: hidden;
+        min-height: 570px;
+        margin: 0;
+        padding: 0;
+        background-color: var(--olive);
+        background-image:
+          linear-gradient(90deg, transparent 50%, rgba(111, 140, 116, 0.66) 50%),
+          linear-gradient(rgba(111, 140, 116, 0.66) 50%, transparent 50%);
+        background-size: 180px 180px;
+        border: 5px solid var(--cream);
         border-radius: 30px;
         box-shadow: 16px 16px 0 var(--green-dark);
         transform: rotate(-2.5deg);
       }
 
-      .teacher-poster img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 4 / 5;
-        object-fit: cover;
-        object-position: center bottom;
-        border-radius: 17px;
+      .teacher-poster::after {
+        position: absolute;
+        right: -85px;
+        bottom: 82px;
+        width: 250px;
+        height: 250px;
+        content: "";
+        border: 45px solid rgba(255, 248, 231, 0.16);
+        border-radius: 50%;
       }
 
-      .teacher-poster span {
-        display: block;
-        padding: 14px 6px 2px;
-        color: var(--wine);
-        font-family: var(--display);
-        font-size: 1.5rem;
-        font-weight: 700;
+      .teacher-poster img {
+        position: absolute;
+        z-index: 2;
+        right: -8%;
+        bottom: 58px;
+        width: 116%;
+        max-width: none;
+        height: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 18px 22px rgba(38, 61, 50, 0.23));
+      }
+
+      .portrait-kicker {
+        position: absolute;
+        z-index: 4;
+        top: 22px;
+        left: 22px;
+        padding: 9px 12px;
+        color: var(--cream);
+        background: var(--wine);
+        border-radius: 999px;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transform: rotate(-2deg);
+      }
+
+      .portrait-star {
+        position: absolute;
+        z-index: 4;
+        top: 24px;
+        right: 28px;
+        color: var(--cream);
+        font-size: 3rem;
+        line-height: 1;
+      }
+
+      .teacher-poster figcaption {
+        position: absolute;
+        z-index: 5;
+        right: 18px;
+        bottom: 18px;
+        left: 18px;
+        padding: 15px 18px 14px;
+        color: var(--cream);
+        background: var(--wine);
+        border: 2px solid var(--cream);
+        border-radius: 15px;
         text-align: center;
+        transform: rotate(1deg);
+      }
+
+      .teacher-poster figcaption strong {
+        display: block;
+        font-family: var(--display);
+        font-size: 1.7rem;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .teacher-poster figcaption span {
+        display: block;
+        margin-top: 5px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
       }
 
@@ -1272,14 +1418,19 @@
 
           <div class="poster-wrap reveal">
             <span class="scribble" aria-hidden="true">✦</span>
-            <figure class="poster">
-              <img
-                src="assets/aulas-vip-referencia.jpeg"
-                alt="Material das Aulas VIP de Inglês com a professora Malu Pimentel"
-                width="900"
-                height="1600"
-              />
-            </figure>
+            <article class="vip-card" aria-label="O que você encontra nas Aulas VIP de Inglês">
+              <h2 class="vip-title"><span>Aulas VIP</span><span>de Inglês</span></h2>
+              <span class="vip-flag" aria-hidden="true">🇺🇸</span>
+              <div class="vip-benefits">
+                <h2>O que você vai encontrar nas aulas?</h2>
+                <ul>
+                  <li>Acompanhamento do ponto onde você está até a fluência</li>
+                  <li>Conversação online prática e situações reais do dia a dia</li>
+                  <li>Ambiente acolhedor para praticar sem medo</li>
+                  <li>Flexibilidade de horários para encaixar na sua rotina</li>
+                </ul>
+              </div>
+            </article>
             <span class="poster-label">Speak with confidence</span>
           </div>
         </div>
@@ -1394,13 +1545,18 @@
       <section class="teacher" id="professora">
         <div class="container teacher-grid">
           <figure class="teacher-poster reveal">
+            <span class="portrait-kicker">Meet your teacher</span>
+            <span class="portrait-star" aria-hidden="true">✦</span>
             <img
-              src="assets/aulas-vip-referencia.jpeg"
+              src="assets/malu-cutout.png"
               alt="Professora Malu Pimentel"
-              width="900"
-              height="1600"
+              width="1224"
+              height="1224"
             />
-            <span>Malu Pimentel • Your English teacher</span>
+            <figcaption>
+              <strong>Malu Pimentel</strong>
+              <span>Inglês para a vida real</span>
+            </figcaption>
           </figure>
 
           <div class="teacher-copy reveal">
