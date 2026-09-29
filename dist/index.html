@@ -1,0 +1,1534 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aulas VIP de inglês com Malu Pimentel: conversação prática, acompanhamento personalizado e horários flexíveis."
+    />
+    <meta name="theme-color" content="#7d9276" />
+    <title>Aulas VIP de Inglês | Malu Pimentel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239a2025'/%3E%3Cpath d='M18 47 27 17h10l9 30H36l-1.5-7h-7L26 47Zm11-15h4l-2-9Z' fill='%23fff8e7'/%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --wine: #98252a;
+        --wine-dark: #6f171d;
+        --green: #788d72;
+        --green-dark: #263d32;
+        --olive: #9ba77a;
+        --cream: #fff8e7;
+        --paper: #f7f1df;
+        --ink: #1e201d;
+        --white: #fffdf6;
+        --line: rgba(30, 32, 29, 0.16);
+        --shadow: 0 22px 60px rgba(48, 44, 30, 0.18);
+        --radius: 28px;
+        --display: "Oswald", "Arial Narrow", sans-serif;
+        --body: "DM Sans", system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 92px;
+        overflow-x: hidden;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--cream);
+        font-family: var(--body);
+        font-size: 16px;
+        line-height: 1.5;
+        overflow-x: hidden;
+      }
+
+      body::selection {
+        color: var(--cream);
+        background: var(--wine);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        padding: 10px 14px;
+        color: var(--cream);
+        background: var(--wine-dark);
+        border-radius: 8px;
+        transform: translateY(-150%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 40px));
+        margin-inline: auto;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin: 0 0 16px;
+        color: var(--wine);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 24px;
+        height: 2px;
+        content: "";
+        background: currentColor;
+      }
+
+      .section-title {
+        max-width: 830px;
+        margin: 0;
+        font-family: var(--display);
+        font-size: clamp(2.8rem, 7vw, 6.3rem);
+        font-weight: 700;
+        letter-spacing: -0.045em;
+        line-height: 0.94;
+        text-transform: uppercase;
+      }
+
+      .section-title em {
+        color: var(--wine);
+        font-style: normal;
+      }
+
+      .nav-shell {
+        position: fixed;
+        top: 16px;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        pointer-events: none;
+      }
+
+      .nav {
+        display: flex;
+        min-height: 64px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 11px 9px 20px;
+        background: rgba(255, 248, 231, 0.9);
+        border: 1px solid rgba(152, 37, 42, 0.18);
+        border-radius: 999px;
+        box-shadow: 0 14px 35px rgba(38, 61, 50, 0.13);
+        backdrop-filter: blur(16px);
+        pointer-events: auto;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        color: var(--cream);
+        background: var(--wine);
+        border-radius: 50%;
+        font-family: var(--display);
+        font-size: 1.3rem;
+        transform: rotate(-5deg);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        font-size: 0.91rem;
+        font-weight: 600;
+      }
+
+      .nav-links a:not(.nav-cta) {
+        position: relative;
+      }
+
+      .nav-links a:not(.nav-cta)::after {
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        left: 0;
+        height: 2px;
+        content: "";
+        background: var(--wine);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 180ms ease;
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a:focus-visible::after {
+        transform: scaleX(1);
+      }
+
+      .nav-cta,
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 19px;
+        color: var(--cream);
+        background: var(--wine);
+        border: 2px solid var(--wine);
+        border-radius: 999px;
+        font-weight: 700;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .button {
+        min-height: 58px;
+        padding-inline: 26px;
+      }
+
+      .nav-cta:hover,
+      .button:hover {
+        background: var(--wine-dark);
+        box-shadow: 0 10px 24px rgba(111, 23, 29, 0.22);
+        transform: translateY(-2px);
+      }
+
+      .button.secondary {
+        color: var(--ink);
+        background: transparent;
+        border-color: rgba(30, 32, 29, 0.5);
+      }
+
+      .button.secondary:hover {
+        color: var(--cream);
+        background: var(--green-dark);
+        border-color: var(--green-dark);
+      }
+
+      .button:focus-visible,
+      .nav a:focus-visible,
+      .goal-card:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid #184e9d;
+        outline-offset: 4px;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 860px;
+        padding: 128px 0 78px;
+        color: var(--cream);
+        background-color: var(--green);
+        background-image:
+          linear-gradient(90deg, transparent 50%, rgba(151, 164, 116, 0.72) 50%),
+          linear-gradient(rgba(151, 164, 116, 0.72) 50%, transparent 50%);
+        background-size: 390px 390px;
+        isolation: isolate;
+      }
+
+      .hero::after {
+        position: absolute;
+        z-index: -1;
+        right: -120px;
+        bottom: -90px;
+        width: 460px;
+        height: 460px;
+        content: "";
+        border: 90px solid rgba(255, 248, 231, 0.09);
+        border-radius: 50%;
+      }
+
+      .hero-grid {
+        display: grid;
+        align-items: center;
+        grid-template-columns: minmax(0, 1.15fr) minmax(330px, 0.68fr);
+        gap: clamp(34px, 7vw, 92px);
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding: 8px 13px;
+        color: var(--green-dark);
+        background: var(--cream);
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transform: rotate(-1.5deg);
+      }
+
+      .hero h1 {
+        max-width: 780px;
+        margin: 0;
+        font-family: var(--display);
+        font-size: clamp(4.2rem, 8.2vw, 7.4rem);
+        font-weight: 700;
+        letter-spacing: -0.065em;
+        line-height: 0.8;
+        text-transform: uppercase;
+        text-wrap: balance;
+        text-shadow: 5px 5px 0 var(--wine);
+      }
+
+      .headline-line {
+        display: block;
+        white-space: nowrap;
+      }
+
+      .hero h1 .headline-accent {
+        display: inline-block;
+        color: var(--wine);
+        -webkit-text-stroke: 2px var(--cream);
+        text-shadow: 4px 4px 0 var(--cream);
+      }
+
+      .hero-lead {
+        max-width: 620px;
+        margin: 30px 0 27px;
+        font-size: clamp(1.08rem, 2vw, 1.3rem);
+        line-height: 1.55;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero .button.primary {
+        color: var(--wine-dark);
+        background: var(--cream);
+        border-color: var(--cream);
+      }
+
+      .hero .button.primary:hover {
+        color: var(--cream);
+        background: var(--wine);
+        border-color: var(--wine);
+      }
+
+      .hero .button.secondary {
+        color: var(--cream);
+        border-color: rgba(255, 248, 231, 0.7);
+      }
+
+      .hero .button.secondary:hover {
+        color: var(--green-dark);
+        background: var(--cream);
+      }
+
+      .hero-note {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+        margin: 28px 0 0;
+        padding: 0;
+        color: rgba(255, 248, 231, 0.9);
+        list-style: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .hero-note li::before {
+        margin-right: 7px;
+        color: var(--cream);
+        content: "✦";
+      }
+
+      .poster-wrap {
+        position: relative;
+        width: min(100%, 410px);
+        margin-inline: auto;
+      }
+
+      .poster-wrap::before {
+        position: absolute;
+        z-index: -1;
+        inset: -18px 14px 18px -14px;
+        content: "";
+        background: var(--wine);
+        border: 3px solid var(--cream);
+        border-radius: 35px;
+        transform: rotate(-3deg);
+      }
+
+      .poster {
+        overflow: hidden;
+        background: var(--paper);
+        border: 5px solid var(--cream);
+        border-radius: 30px;
+        box-shadow: var(--shadow);
+        transform: rotate(2deg);
+        transition: transform 280ms ease;
+      }
+
+      .poster:hover {
+        transform: rotate(0deg) translateY(-5px);
+      }
+
+      .poster img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 9 / 13;
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      .poster-label {
+        position: absolute;
+        right: -35px;
+        bottom: 28px;
+        padding: 13px 17px;
+        color: var(--wine-dark);
+        background: var(--cream);
+        border: 2px solid var(--wine);
+        border-radius: 14px;
+        font-family: var(--display);
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        transform: rotate(-6deg);
+      }
+
+      .scribble {
+        position: absolute;
+        top: -45px;
+        right: -42px;
+        color: var(--cream);
+        font-size: 4rem;
+        line-height: 1;
+        transform: rotate(12deg);
+      }
+
+      .ticker {
+        position: relative;
+        z-index: 5;
+        overflow: hidden;
+        color: var(--cream);
+        background: var(--wine);
+        border-top: 3px solid var(--cream);
+        border-bottom: 3px solid var(--cream);
+        transform: rotate(-1.1deg) scale(1.02);
+      }
+
+      .ticker-track {
+        display: flex;
+        width: max-content;
+        padding: 15px 0;
+        font-family: var(--display);
+        font-size: clamp(1.25rem, 2.6vw, 2rem);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        animation: ticker 24s linear infinite;
+      }
+
+      .ticker-track span {
+        padding-right: 40px;
+      }
+
+      .ticker-track span::after {
+        margin-left: 40px;
+        content: "★";
+      }
+
+      @keyframes ticker {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .benefits {
+        position: relative;
+        padding: 132px 0 118px;
+        background: var(--paper);
+      }
+
+      .benefits-intro {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 54px;
+      }
+
+      .benefits-intro > p {
+        max-width: 410px;
+        margin: 0 0 5px;
+        color: #4f554e;
+        font-size: 1.08rem;
+      }
+
+      .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .benefit-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 270px;
+        padding: clamp(28px, 4vw, 46px);
+        background: var(--white);
+        border: 1px solid rgba(152, 37, 42, 0.25);
+        border-radius: var(--radius);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .benefit-card:hover {
+        z-index: 2;
+        box-shadow: var(--shadow);
+        transform: translateY(-5px) rotate(-0.5deg);
+      }
+
+      .benefit-card:nth-child(2),
+      .benefit-card:nth-child(3) {
+        color: var(--cream);
+        background: var(--green-dark);
+        border-color: var(--green-dark);
+      }
+
+      .benefit-card:nth-child(4) {
+        background: var(--olive);
+        border-color: var(--olive);
+      }
+
+      .benefit-number {
+        display: grid;
+        width: 50px;
+        height: 50px;
+        place-items: center;
+        margin-bottom: 35px;
+        color: var(--cream);
+        background: var(--wine);
+        border-radius: 50%;
+        font-family: var(--display);
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .benefit-card h3 {
+        max-width: 450px;
+        margin: 0 0 12px;
+        font-family: var(--display);
+        font-size: clamp(1.8rem, 3vw, 2.7rem);
+        letter-spacing: -0.03em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .benefit-card p {
+        max-width: 500px;
+        margin: 0;
+        opacity: 0.83;
+      }
+
+      .benefit-card .star {
+        position: absolute;
+        top: 22px;
+        right: 30px;
+        color: var(--wine);
+        font-size: 2.6rem;
+        transform: rotate(13deg);
+      }
+
+      .path {
+        padding: 118px 0;
+        color: var(--cream);
+        background: var(--green-dark);
+      }
+
+      .path .eyebrow {
+        color: #dfe8c1;
+      }
+
+      .path-header {
+        display: grid;
+        grid-template-columns: 1.1fr 0.6fr;
+        gap: 50px;
+        align-items: end;
+      }
+
+      .path-header p:last-child {
+        margin: 0 0 10px;
+        color: rgba(255, 248, 231, 0.75);
+        font-size: 1.06rem;
+      }
+
+      .steps {
+        position: relative;
+        display: grid;
+        margin-top: 75px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .steps::before {
+        position: absolute;
+        top: 32px;
+        right: 12%;
+        left: 12%;
+        height: 2px;
+        content: "";
+        background: rgba(255, 248, 231, 0.25);
+      }
+
+      .step {
+        position: relative;
+        padding: 74px 26px 28px;
+        background: rgba(255, 248, 231, 0.05);
+        border: 1px solid rgba(255, 248, 231, 0.18);
+        border-radius: 22px;
+      }
+
+      .step-dot {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        left: 24px;
+        display: grid;
+        width: 45px;
+        height: 45px;
+        place-items: center;
+        color: var(--green-dark);
+        background: var(--cream);
+        border: 5px solid var(--green-dark);
+        border-radius: 50%;
+        font-family: var(--display);
+        font-weight: 700;
+      }
+
+      .step h3 {
+        margin: 0 0 12px;
+        font-family: var(--display);
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+      .step p {
+        margin: 0;
+        color: rgba(255, 248, 231, 0.72);
+      }
+
+      .fit {
+        padding: 128px 0;
+        background: var(--cream);
+      }
+
+      .fit-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: clamp(45px, 7vw, 100px);
+        align-items: start;
+      }
+
+      .fit-copy {
+        position: sticky;
+        top: 120px;
+      }
+
+      .fit-copy p:not(.eyebrow) {
+        max-width: 510px;
+        margin: 26px 0 0;
+        color: #545a54;
+        font-size: 1.08rem;
+      }
+
+      .goal-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .goal-card {
+        width: 100%;
+        padding: 24px 25px;
+        color: var(--ink);
+        text-align: left;
+        background: var(--white);
+        border: 1px solid rgba(30, 32, 29, 0.2);
+        border-radius: 20px;
+        cursor: pointer;
+        transition: border 160ms ease, transform 160ms ease, background 160ms ease;
+      }
+
+      .goal-card:hover {
+        border-color: var(--wine);
+        transform: translateX(5px);
+      }
+
+      .goal-card[aria-pressed="true"] {
+        color: var(--cream);
+        background: var(--wine);
+        border-color: var(--wine);
+        box-shadow: 8px 8px 0 var(--olive);
+      }
+
+      .goal-card strong {
+        display: block;
+        margin-bottom: 5px;
+        font-family: var(--display);
+        font-size: 1.45rem;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+      }
+
+      .goal-card span {
+        display: block;
+        opacity: 0.74;
+      }
+
+      .goal-result {
+        margin-top: 22px;
+        padding: 28px;
+        background: var(--olive);
+        border-radius: 22px;
+      }
+
+      .goal-result small {
+        display: block;
+        margin-bottom: 9px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .goal-result h3 {
+        margin: 0 0 10px;
+        font-family: var(--display);
+        font-size: 2rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      .goal-result p {
+        margin: 0 0 21px;
+      }
+
+      .teacher {
+        position: relative;
+        overflow: hidden;
+        padding: 118px 0;
+        color: var(--cream);
+        background: var(--wine);
+      }
+
+      .teacher::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background-image: radial-gradient(circle, rgba(255, 248, 231, 0.18) 2px, transparent 2px);
+        background-size: 28px 28px;
+        opacity: 0.3;
+      }
+
+      .teacher-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.78fr 1.22fr;
+        gap: clamp(45px, 7vw, 95px);
+        align-items: center;
+      }
+
+      .teacher-poster {
+        position: relative;
+        padding: 18px;
+        background: var(--cream);
+        border-radius: 30px;
+        box-shadow: 16px 16px 0 var(--green-dark);
+        transform: rotate(-2.5deg);
+      }
+
+      .teacher-poster img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: center bottom;
+        border-radius: 17px;
+      }
+
+      .teacher-poster span {
+        display: block;
+        padding: 14px 6px 2px;
+        color: var(--wine);
+        font-family: var(--display);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .teacher-copy .eyebrow {
+        color: var(--cream);
+      }
+
+      .teacher-copy .section-title {
+        color: var(--cream);
+      }
+
+      .teacher-copy .section-title em {
+        color: #d9e3b7;
+      }
+
+      .teacher-copy > p:not(.eyebrow) {
+        max-width: 620px;
+        color: rgba(255, 248, 231, 0.84);
+        font-size: 1.1rem;
+      }
+
+      .teacher-quote {
+        position: relative;
+        max-width: 620px;
+        margin: 32px 0;
+        padding: 28px 30px 27px 58px;
+        color: var(--green-dark);
+        background: var(--cream);
+        border-radius: 20px;
+        font-family: var(--display);
+        font-size: clamp(1.45rem, 3vw, 2rem);
+        line-height: 1.25;
+        transform: rotate(1deg);
+      }
+
+      .teacher-quote::before {
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        color: var(--wine);
+        content: "“";
+        font-family: Georgia, serif;
+        font-size: 4.5rem;
+        line-height: 1;
+      }
+
+      .teacher-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .teacher .button {
+        color: var(--wine);
+        background: var(--cream);
+        border-color: var(--cream);
+      }
+
+      .teacher .button.secondary {
+        color: var(--cream);
+        background: transparent;
+        border-color: var(--cream);
+      }
+
+      .faq {
+        padding: 125px 0;
+        background: var(--paper);
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 0.76fr 1.24fr;
+        gap: clamp(40px, 8vw, 120px);
+      }
+
+      .faq-items {
+        border-top: 1px solid var(--line);
+      }
+
+      details {
+        border-bottom: 1px solid var(--line);
+      }
+
+      summary {
+        position: relative;
+        padding: 25px 50px 25px 0;
+        cursor: pointer;
+        font-family: var(--display);
+        font-size: clamp(1.2rem, 2vw, 1.6rem);
+        font-weight: 600;
+        list-style: none;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary::after {
+        position: absolute;
+        top: 22px;
+        right: 4px;
+        display: grid;
+        width: 32px;
+        height: 32px;
+        place-items: center;
+        color: var(--cream);
+        background: var(--wine);
+        border-radius: 50%;
+        content: "+";
+        font-family: var(--body);
+        font-size: 1.25rem;
+        transition: transform 180ms ease;
+      }
+
+      details[open] summary::after {
+        transform: rotate(45deg);
+      }
+
+      details p {
+        max-width: 650px;
+        margin: -4px 55px 26px 0;
+        color: #5c625b;
+      }
+
+      .final-cta {
+        position: relative;
+        overflow: hidden;
+        padding: 120px 0 60px;
+        color: var(--cream);
+        background: var(--green);
+      }
+
+      .final-cta::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background:
+          linear-gradient(90deg, transparent 50%, rgba(155, 167, 122, 0.6) 50%),
+          linear-gradient(rgba(155, 167, 122, 0.6) 50%, transparent 50%);
+        background-size: 320px 320px;
+      }
+
+      .cta-box {
+        position: relative;
+        padding: clamp(35px, 7vw, 82px);
+        color: var(--ink);
+        text-align: center;
+        background: var(--cream);
+        border: 4px solid var(--wine);
+        border-radius: 34px;
+        box-shadow: 12px 12px 0 var(--wine);
+      }
+
+      .cta-box .eyebrow {
+        margin-inline: auto;
+      }
+
+      .cta-box .section-title {
+        max-width: 920px;
+        margin-inline: auto;
+      }
+
+      .cta-box p:not(.eyebrow) {
+        max-width: 620px;
+        margin: 27px auto 31px;
+        color: #555b55;
+        font-size: 1.08rem;
+      }
+
+      .cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .footer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        padding-top: 86px;
+        font-size: 0.9rem;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-weight: 700;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        z-index: 90;
+        right: 22px;
+        bottom: 22px;
+        display: grid;
+        width: 62px;
+        height: 62px;
+        place-items: center;
+        color: var(--cream);
+        background: var(--wine);
+        border: 3px solid var(--cream);
+        border-radius: 50%;
+        box-shadow: 0 12px 30px rgba(30, 32, 29, 0.22);
+        font-size: 1.55rem;
+        font-weight: 900;
+        transition: transform 180ms ease;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.08) rotate(-4deg);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 620ms ease, transform 620ms ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 900px) {
+        .nav-links a:not(.nav-cta) {
+          display: none;
+        }
+
+        .hero {
+          min-height: 0;
+          padding-top: 118px;
+        }
+
+        .hero-grid,
+        .path-header,
+        .fit-grid,
+        .teacher-grid,
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-grid {
+          gap: 70px;
+        }
+
+        .poster-wrap {
+          width: min(84%, 430px);
+        }
+
+        .benefits-intro {
+          display: block;
+        }
+
+        .benefits-intro > p {
+          margin-top: 24px;
+        }
+
+        .fit-copy {
+          position: static;
+        }
+
+        .teacher-poster {
+          width: min(82%, 440px);
+          margin-inline: auto;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .container {
+          width: min(100% - 28px, 1180px);
+        }
+
+        .nav-shell {
+          top: 10px;
+        }
+
+        .nav {
+          min-height: 56px;
+          padding: 7px 8px 7px 12px;
+        }
+
+        .brand {
+          font-size: 0.9rem;
+        }
+
+        .brand-mark {
+          width: 34px;
+          height: 34px;
+        }
+
+        .nav-cta {
+          min-height: 42px;
+          padding: 9px 13px;
+          font-size: 0.82rem;
+        }
+
+        .hero {
+          padding: 106px 0 65px;
+          background-size: 220px 220px;
+        }
+
+        .hero h1 {
+          font-size: clamp(3.25rem, 15vw, 4.2rem);
+          line-height: 0.84;
+          text-shadow: 3px 3px 0 var(--wine);
+        }
+
+        .hero h1 .headline-accent {
+          -webkit-text-stroke-width: 1px;
+          text-shadow: 3px 3px 0 var(--cream);
+        }
+
+        .hero-actions,
+        .teacher-links,
+        .cta-actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .hero-actions .button,
+        .teacher-links .button,
+        .cta-actions .button {
+          width: 100%;
+        }
+
+        .poster-label {
+          right: -12px;
+          bottom: 18px;
+          font-size: 1rem;
+        }
+
+        .scribble {
+          right: -12px;
+        }
+
+        .benefits,
+        .path,
+        .fit,
+        .teacher,
+        .faq {
+          padding: 90px 0;
+        }
+
+        .benefit-grid,
+        .steps {
+          grid-template-columns: 1fr;
+        }
+
+        .benefit-card {
+          min-height: 240px;
+        }
+
+        .steps {
+          margin-top: 48px;
+        }
+
+        .steps::before {
+          display: none;
+        }
+
+        .teacher-poster {
+          width: 100%;
+        }
+
+        .teacher-quote {
+          padding-left: 50px;
+        }
+
+        .final-cta {
+          padding: 85px 0 36px;
+        }
+
+        .cta-box {
+          box-shadow: 7px 7px 0 var(--wine);
+        }
+
+        .footer {
+          align-items: flex-start;
+          flex-direction: column;
+          padding-top: 70px;
+        }
+
+        .whatsapp-float {
+          right: 14px;
+          bottom: 14px;
+          width: 56px;
+          height: 56px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <div class="nav-shell">
+      <nav class="nav container" aria-label="Navegação principal">
+        <a class="brand" href="#inicio" aria-label="Aulas VIP de Inglês — início">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span>Aulas VIP</span>
+        </a>
+        <div class="nav-links">
+          <a href="#aulas">As aulas</a>
+          <a href="#metodo">Método</a>
+          <a href="#professora">Professora</a>
+          <a class="nav-cta wa-link" href="https://wa.me/5548999359529" target="_blank" rel="noreferrer">Quero conversar</a>
+        </div>
+      </nav>
+    </div>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="hero-kicker"><span aria-hidden="true">🇺🇸</span> Inglês online • do seu jeito</span>
+            <h1>
+              <span class="headline-line">Inglês para</span>
+              <span class="headline-line headline-accent">falar.</span>
+              <span class="headline-line">Não decorar.</span>
+            </h1>
+            <p class="hero-lead">
+              Aulas VIP com conversação de verdade, acompanhamento próximo e um plano que começa exatamente de onde você está.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary wa-link" href="https://wa.me/5548999359529" target="_blank" rel="noreferrer">Quero destravar meu inglês</a>
+              <a class="button secondary" href="#aulas">Conhecer as aulas</a>
+            </div>
+            <ul class="hero-note" aria-label="Destaques das aulas">
+              <li>100% online</li>
+              <li>Horários flexíveis</li>
+              <li>Ritmo personalizado</li>
+            </ul>
+          </div>
+
+          <div class="poster-wrap reveal">
+            <span class="scribble" aria-hidden="true">✦</span>
+            <figure class="poster">
+              <img
+                src="assets/aulas-vip-referencia.jpeg"
+                alt="Material das Aulas VIP de Inglês com a professora Malu Pimentel"
+                width="900"
+                height="1600"
+              />
+            </figure>
+            <span class="poster-label">Speak with confidence</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Conversação real</span><span>Inglês sem medo</span><span>Aulas no seu ritmo</span><span>Prática que acompanha você</span>
+          <span>Conversação real</span><span>Inglês sem medo</span><span>Aulas no seu ritmo</span><span>Prática que acompanha você</span>
+        </div>
+      </div>
+
+      <section class="benefits" id="aulas">
+        <div class="container">
+          <div class="benefits-intro reveal">
+            <div>
+              <p class="eyebrow">O que você encontra nas aulas</p>
+              <h2 class="section-title">Tudo para você <em>usar</em> o inglês.</h2>
+            </div>
+            <p>Sem fórmula engessada. Cada encontro conecta o idioma às conversas, decisões e situações que já fazem parte da sua vida.</p>
+          </div>
+
+          <div class="benefit-grid">
+            <article class="benefit-card reveal">
+              <span class="benefit-number">01</span><span class="star" aria-hidden="true">✦</span>
+              <h3>Um plano que começa em você</h3>
+              <p>Acompanhamento desde o seu nível atual até a fluência que faz sentido para os seus objetivos.</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span class="benefit-number">02</span><span class="star" aria-hidden="true">✦</span>
+              <h3>Conversação desde a primeira aula</h3>
+              <p>Prática guiada com situações reais para transformar vocabulário em confiança na hora de falar.</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span class="benefit-number">03</span><span class="star" aria-hidden="true">✦</span>
+              <h3>Um espaço seguro para tentar</h3>
+              <p>Correções claras, incentivo e acolhimento para você praticar sem medo de errar.</p>
+            </article>
+            <article class="benefit-card reveal">
+              <span class="benefit-number">04</span><span class="star" aria-hidden="true">✦</span>
+              <h3>Aulas que cabem na sua rotina</h3>
+              <p>Flexibilidade de horários e uma dinâmica online para manter a consistência mesmo nos dias corridos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="path" id="metodo">
+        <div class="container">
+          <div class="path-header reveal">
+            <div>
+              <p class="eyebrow">O caminho da fluência</p>
+              <h2 class="section-title">Menos bloqueio.<br /><em>Mais conversa.</em></h2>
+            </div>
+            <p>O método une repertório, prática e feedback. Você entende o que precisa melhorar e já aplica na conversa seguinte.</p>
+          </div>
+
+          <div class="steps">
+            <article class="step reveal">
+              <span class="step-dot">1</span>
+              <h3>Destravar</h3>
+              <p>Mapeamos seu momento, objetivos e os bloqueios que fazem o inglês desaparecer quando você mais precisa.</p>
+            </article>
+            <article class="step reveal">
+              <span class="step-dot">2</span>
+              <h3>Praticar</h3>
+              <p>Treinamos conversas do cotidiano, viagens e trabalho com apoio para você se expressar com mais naturalidade.</p>
+            </article>
+            <article class="step reveal">
+              <span class="step-dot">3</span>
+              <h3>Expandir</h3>
+              <p>Seu vocabulário e sua autonomia crescem juntos, com revisões que consolidam o que você já conquistou.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="fit" id="objetivo">
+        <div class="container fit-grid">
+          <div class="fit-copy reveal">
+            <p class="eyebrow">A aula encontra o seu objetivo</p>
+            <h2 class="section-title">Onde o inglês precisa te levar?</h2>
+            <p>Escolha a situação que mais combina com você e veja como as aulas podem ser direcionadas.</p>
+          </div>
+
+          <div>
+            <div class="goal-list" role="group" aria-label="Escolha seu principal objetivo">
+              <button class="goal-card" type="button" aria-pressed="true" data-goal="viagem">
+                <strong>Viajar com independência</strong>
+                <span>Pedir, perguntar, resolver e aproveitar sem depender de tradução.</span>
+              </button>
+              <button class="goal-card" type="button" aria-pressed="false" data-goal="trabalho">
+                <strong>Crescer no trabalho</strong>
+                <span>Participar de reuniões, apresentar ideias e criar novas oportunidades.</span>
+              </button>
+              <button class="goal-card" type="button" aria-pressed="false" data-goal="conversa">
+                <strong>Conversar sem travar</strong>
+                <span>Ganhar segurança para sustentar diálogos e mostrar sua personalidade.</span>
+              </button>
+            </div>
+
+            <aside class="goal-result reveal" aria-live="polite">
+              <small>Seu foco de aula</small>
+              <h3 id="goal-title">Inglês para situações reais de viagem</h3>
+              <p id="goal-description">Simulações práticas, vocabulário essencial e estratégias para você se comunicar mesmo quando faltar uma palavra.</p>
+              <a id="goal-cta" class="button wa-link" href="https://wa.me/5548999359529" target="_blank" rel="noreferrer">Quero falar sobre esse objetivo</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="teacher" id="professora">
+        <div class="container teacher-grid">
+          <figure class="teacher-poster reveal">
+            <img
+              src="assets/aulas-vip-referencia.jpeg"
+              alt="Professora Malu Pimentel"
+              width="900"
+              height="1600"
+            />
+            <span>Malu Pimentel • Your English teacher</span>
+          </figure>
+
+          <div class="teacher-copy reveal">
+            <p class="eyebrow">Prazer, teacher Malu</p>
+            <h2 class="section-title">Acolhimento para tentar. <em>Direção para evoluir.</em></h2>
+            <p>As aulas foram pensadas para quem sabe que pode ir mais longe, mas precisa de um espaço leve, personalizado e comprometido com a prática.</p>
+            <blockquote class="teacher-quote">O inglês deixa de ser uma matéria quando começa a fazer parte da sua voz.</blockquote>
+            <div class="teacher-links">
+              <a class="button wa-link" href="https://wa.me/5548999359529" target="_blank" rel="noreferrer">Conversar com a Malu</a>
+              <a class="button secondary" href="https://instagram.com/itsmalupimentel" target="_blank" rel="noreferrer">@itsmalupimentel</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="container faq-grid">
+          <div class="reveal">
+            <p class="eyebrow">Antes da primeira aula</p>
+            <h2 class="section-title">Dúvidas <em>frequentes</em></h2>
+          </div>
+
+          <div class="faq-items reveal">
+            <details open>
+              <summary>Preciso já saber inglês?</summary>
+              <p>Não. O ponto de partida é o seu nível atual. A proposta é construir segurança com uma progressão que faça sentido para você.</p>
+            </details>
+            <details>
+              <summary>As aulas são individuais?</summary>
+              <p>As Aulas VIP priorizam acompanhamento próximo e planejamento personalizado. A disponibilidade e o formato ideal são alinhados diretamente com a professora.</p>
+            </details>
+            <details>
+              <summary>Como funcionam os horários?</summary>
+              <p>As aulas são online e os horários são combinados para se encaixar na rotina do aluno e na agenda disponível da professora.</p>
+            </details>
+            <details>
+              <summary>Como faço para começar?</summary>
+              <p>Chame no WhatsApp, conte seu objetivo e receba as orientações sobre disponibilidade, formato e próximos passos.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container">
+          <div class="cta-box reveal">
+            <p class="eyebrow">Your next chapter starts here</p>
+            <h2 class="section-title">Sua próxima conversa em inglês pode começar <em>agora.</em></h2>
+            <p>Conte para a Malu onde você quer chegar. A primeira conversa já ajuda a entender o melhor caminho para a sua rotina e o seu objetivo.</p>
+            <div class="cta-actions">
+              <a class="button wa-link" href="https://wa.me/5548999359529" target="_blank" rel="noreferrer">Chamar no WhatsApp</a>
+              <a class="button secondary" href="tel:+5548999359529">(48) 99935-9529</a>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <a class="brand" href="#inicio">
+              <span class="brand-mark" aria-hidden="true">A</span>
+              <span>Aulas VIP de Inglês</span>
+            </a>
+            <div class="footer-links">
+              <a href="#aulas">As aulas</a>
+              <a href="#metodo">Método</a>
+              <a href="#faq">Dúvidas</a>
+              <a href="https://instagram.com/itsmalupimentel" target="_blank" rel="noreferrer">Instagram</a>
+            </div>
+            <span>© <span id="year"></span> Malu Pimentel</span>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <a class="whatsapp-float wa-link" href="https://wa.me/5548999359529" target="_blank" rel="noreferrer" aria-label="Conversar pelo WhatsApp">W</a>
+
+    <script>
+      const goalContent = {
+        viagem: {
+          title: "Inglês para situações reais de viagem",
+          description: "Simulações práticas, vocabulário essencial e estratégias para você se comunicar mesmo quando faltar uma palavra.",
+          message: "Olá, Malu! Quero saber mais sobre as Aulas VIP. Meu foco é viajar com mais independência."
+        },
+        trabalho: {
+          title: "Inglês para avançar profissionalmente",
+          description: "Reuniões, apresentações e conversas de trabalho praticadas com o vocabulário e o contexto da sua área.",
+          message: "Olá, Malu! Quero saber mais sobre as Aulas VIP. Meu foco é usar inglês no trabalho."
+        },
+        conversa: {
+          title: "Inglês para falar com confiança",
+          description: "Prática consistente para reduzir o bloqueio, ampliar repertório e deixar sua fala mais espontânea.",
+          message: "Olá, Malu! Quero saber mais sobre as Aulas VIP. Meu foco é conversar sem travar."
+        }
+      };
+
+      const baseMessage = "Olá, Malu! Vi a página das Aulas VIP e quero saber mais.";
+      const waBase = "https://wa.me/5548999359529?text=";
+      const goalTitle = document.querySelector("#goal-title");
+      const goalDescription = document.querySelector("#goal-description");
+      const goalCta = document.querySelector("#goal-cta");
+
+      document.querySelectorAll(".wa-link").forEach((link) => {
+        link.href = waBase + encodeURIComponent(baseMessage);
+      });
+
+      document.querySelectorAll(".goal-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const goal = goalContent[card.dataset.goal];
+          document.querySelectorAll(".goal-card").forEach((item) => item.setAttribute("aria-pressed", String(item === card)));
+          goalTitle.textContent = goal.title;
+          goalDescription.textContent = goal.description;
+          goalCta.href = waBase + encodeURIComponent(goal.message);
+        });
+      });
+
+      document.querySelector("#year").textContent = new Date().getFullYear();
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+    </script>
+  </body>
+</html>
